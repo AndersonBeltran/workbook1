@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" />
+    <link rel="stylesheet" href="hello.js">
+  </head>
+  <body>
+    <main>
+      <label for="number1Input">Number 1</label>
+      <input id="number1Input" type="number" />
+      <label for="number2Input">Number 2</label>
+      <input id="number2Input" type="number" />
+      <button onclick="add()">Add</button>
+      <button onclick="subtract()">Subtract</button>
+      <button onclick="multiply()">Multiply</button>
+      <button onclick="divide()">Divide</button>
+      <label for="answerInput">Answer</label>
+      <input readonly id="answerInput" type="text" />
+    </main>
+    <script>
+      "use strict";
+      let number1Input = document.getElementById("number1Input");
+      let number2Input = document.getElementById("number2Input");
+      let answerInput = document.getElementById("answerInput");
+
+      function add() {
+        var number1 = Number(number1Input.value);
+        var number2 = Number(number2Input.value);
+        var sum = number1 + number2;
+        answerInput.value = sum;
+        console.log(sum);
+      }
+      function subtract() {
+        var number1 = Number(number1Input.value);
+        var number2 = Number(number2Input.value);
+        var subtract = number1 - number2;
+        answerInput.value = subtract;
+        console.log(subtract);
+      }
+      function multiply() {
+        var number1 = Number(number1Input.value);
+        var number2 = Number(number2Input.value);
+        var multiply = number1 * number2;
+        answerInput.value = multiply;
+        console.log(multiply);
+      }
+      function divide() {
+        var number1 = Number(number1Input.value);
+        var number2 = Number(number2Input.value);
+        var divide = number1 / number2;
+        answerInput.value = divide;
+        console.log(divide);
+      }
+    </script>
+  </body>
+</html>
